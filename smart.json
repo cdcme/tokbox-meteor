@@ -3,6 +3,6 @@
   "description": "TokBox API wrapped up for Meteor - npm: 0.3.2, client: 1.1.6",
   "homepage"   : "https://github.com/carlodicelico/tokbox-meteor",
   "author"     : "Carlo DiCelico (http://vonvo.com)",
-  "version"    : "1.0.0",
+  "version"    : "1.0.1",
   "git"        : "https://github.com/carlodicelico/tokbox-meteor"
 }
