@@ -1,8 +1,8 @@
 {
   "name"       : "tokbox",
-  "description": "TokBox API wrapped up for Meteor - npm: 0.3.2, client: 1.1.6",
+  "description": "TokBox API wrapped up for Meteor - npm: 0.3.4, client: 1.1.6",
   "homepage"   : "https://github.com/carlodicelico/tokbox-meteor",
   "author"     : "Carlo DiCelico (http://vonvo.com)",
-  "version"    : "1.0.1",
+  "version"    : "1.0.3",
   "git"        : "https://github.com/carlodicelico/tokbox-meteor"
 }
