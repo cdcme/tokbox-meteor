@@ -12,8 +12,11 @@ Package.describe({
 Npm.depends({"opentok" : "0.3.4"});
 
 Package.on_use(function(api) {
-  api.add_files('client/tokbox-client.js', 'client');
-  api.add_files('server/index.js', 'server');
+  api.add_files(['client/tokbox-client.js'], 'client');
+  api.add_files(['server/index.js'], 'server');
+  if (typeof api.export !== 'undefined') {
+    api.export(['OpenTok'], 'server');
+  }
 });
 
 
