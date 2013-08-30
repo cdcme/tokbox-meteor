@@ -33,10 +33,10 @@ var token = openTokClient.generateToken(sessionId, role, params);
 
 ### Low Level NPM API
 
-If you need to access low level [NPM module API](https://github.com/opentok/opentok-node) use `OpenTok` namespace, which is the npm module required.
+If you need access to the low level [NPM module API](https://github.com/opentok/opentok-node), use `OpenTok` namespace.
 
 
-**Differences between tokbox and cultofmetatron's opentok smart package:**
+### Differences between tokbox and cultofmetatron's opentok smart package:
 
   + (major) Native Meteor API
   + (minor) Updated to opentok-npm 0.3.2
