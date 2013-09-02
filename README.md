@@ -55,7 +55,7 @@ for the WebRTC version. The WebRTC version is recommended since Tokbox is deprec
   + (major) Native Meteor API
   + (minor) Updated to opentok-npm 0.3.2
   + ~~(minor) Updated to TB.min.js 1.1.6~~
-  + (major) Opted for the non-WebRTC version of the client-side library instead of the WebRTC version used by cultofmetatron's opentok
-  + (major) Replaced the customized version of uuid.js used by cultofmetatron's opentok with the original uuid.js
-  + (major) Removed TB alias client-side
-  + (major) Added opentokdebug that comes with Tokbox's client-side library
+  + ~~(major) Opted for the non-WebRTC version of the client-side library instead of the WebRTC version used by cultofmetatron's opentok~~
+  + ~~(major) Replaced the customized version of uuid.js used by cultofmetatron's opentok with the original uuid.js~~
+  + ~~(major) Removed TB alias client-side~~
+  + ~~(major) Added opentokdebug that comes with Tokbox's client-side library~~
