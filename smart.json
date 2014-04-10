@@ -1,6 +1,6 @@
 {
   "name"       : "tokbox",
-  "description": "Tokbox Smart Package with Native Meteor API and Official Client Library wrapped up for Meteor - npm: 1.0.2",
+  "description": "Tokbox npm module version 1.0.2 - add video chat to your Meteor application",
   "homepage"   : "https://github.com/carlodicelico/tokbox-meteor",
   "author"     : "Carlo DiCelico (https://github.com/carlodicelico), Arunoda Susiripala (https://github.com/arunoda)",
   "version"    : "2.0.2",
