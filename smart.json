@@ -1,8 +1,8 @@
 {
   "name"       : "tokbox",
-  "description": "Tokbox Smart Package with Native Meteor API and Official Client Library wrapped up for Meteor - npm: 0.3.4",
+  "description": "Tokbox Smart Package with Native Meteor API and Official Client Library wrapped up for Meteor - npm: 1.0.2",
   "homepage"   : "https://github.com/carlodicelico/tokbox-meteor",
   "author"     : "Carlo DiCelico (https://github.com/carlodicelico), Arunoda Susiripala (https://github.com/arunoda)",
-  "version"    : "1.0.7",
+  "version"    : "2.0.2",
   "git"        : "https://github.com/carlodicelico/tokbox-meteor"
 }
