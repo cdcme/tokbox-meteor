@@ -51,8 +51,8 @@ for the WebRTC version. The WebRTC version is recommended since Tokbox is deprec
 
 ### Changelog
 
+  + Updated minor version number to track NPM module version number
   + Updated to opentok-npm 1.0.2
-  + Updated version number to track NPM module version number
   + Removed TB.min.js to provide the option to choose between Flash & WebRTC versions
   + Added native Meteor API
   + Updated to opentok-npm 0.3.4
