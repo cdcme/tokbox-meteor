@@ -1,7 +1,7 @@
 Tokbox-Meteor
 ==============
 
-Tokbox Smart Package with Native Meteor API and [Official Client Library](http://static.opentok.com/v1.1/js/TB.min.js)
+Tokbox Smart Package with Native Meteor API and 
 
 ### Native API
 
@@ -33,15 +33,26 @@ var token = openTokClient.generateToken(sessionId, role, params);
 
 ### Low Level NPM API
 
-If you need to access low level [NPM module API](https://github.com/opentok/opentok-node) use `OpenTok` namespace, which is the npm module required.
+If you need access to the low level [NPM module API](https://github.com/opentok/opentok-node), use `OpenTok` namespace.
 
+### Client-side usage
 
-**Differences between tokbox and cultofmetatron's opentok smart package:**
+In the `<head>` section of your app:
 
-  + (major) Native Meteor API
-  + (minor) Updated to opentok-npm 0.3.2
-  + (minor) Updated to TB.min.js 1.1.6
-  + (major) Opted for the non-WebRTC version of the client-side library instead of the WebRTC version used by cultofmetatron's opentok
-  + (major) Replaced the customized version of uuid.js used by cultofmetatron's opentok with the original uuid.js
-  + (major) Removed TB alias client-side
-  + (major) Added opentokdebug that comes with Tokbox's client-side library
+~~~ html
+<script src="http://static.opentok.com/webrtc/v2.2/js/TB.min.js" ></script>
+~~~
+
+for the WebRTC version. The WebRTC version is recommended since Tokbox is deprecating the Flash version. However, if you still want to use the Flash version, you can do this in the `<head>` of your app:
+
+~~~ html
+<script src="http://static.opentok.com/v1.1/js/TB.min.js" ></script>
+~~~
+
+### Changelog
+
+  + Updated minor version number to track NPM module version number
+  + Updated to opentok-npm 1.0.2
+  + Removed TB.min.js to provide the option to choose between Flash & WebRTC versions
+  + Added native Meteor API
+  + Updated to opentok-npm 0.3.4
