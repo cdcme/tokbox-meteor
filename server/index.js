@@ -12,8 +12,8 @@ OpenTokClient.prototype.createSession = function(location, options) {
   location = location || '127.0.0.1';
   options = options || {};
   var sessionId = sync(function(done) {
-    self._client.createSession(location, options, function(result) {
-      done(null, result);
+    self._client.createSession(location, options, function(err, result) {
+      done(err, result);
     });
   });
 
