@@ -1,7 +1,7 @@
 Tokbox-Meteor
 ==============
 
-Tokbox Smart Package with Native Meteor API and 
+Tokbox Smart Package with Native Meteor API
 
 ### Native API
 
