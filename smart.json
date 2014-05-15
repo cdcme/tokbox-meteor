@@ -3,6 +3,6 @@
   "description": "Tokbox npm module version 1.0.3 - add video chat to your Meteor application",
   "homepage"   : "https://github.com/carlodicelico/tokbox-meteor",
   "author"     : "Carlo DiCelico (https://github.com/carlodicelico), Arunoda Susiripala (https://github.com/arunoda)",
-  "version"    : "2.0.3",
+  "version"    : "2.0.4",
   "git"        : "https://github.com/carlodicelico/tokbox-meteor"
 }
