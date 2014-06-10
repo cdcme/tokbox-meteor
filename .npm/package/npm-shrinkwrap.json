@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "opentok": {
-      "version": "0.3.4"
-    }
-  }
-}
