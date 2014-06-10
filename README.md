@@ -3,6 +3,10 @@ Tokbox-Meteor
 
 Tokbox Smart Package with Native Meteor API
 
+### Important Note:
+
+If you are updating from a previous version of this SDK, see [Important changes in v2.2](https://github.com/opentok/opentok-node#important-changes-in-v22).
+
 ### Native API
 
 #### Create Tokbox Server Client
@@ -21,7 +25,7 @@ var options = {'p2p.preference':'enabled'};
 var session = openTokClient.createSession(location, options);
 ~~~
 
-#### Generate a token 
+#### Generate a token
 
 ~~~ js
 var sessionId = 'some-session-id';
@@ -51,6 +55,7 @@ for the WebRTC version. The WebRTC version is recommended since Tokbox is deprec
 
 ### Changelog
 
+  + Updated to opentok-npm 2.2.2
   + Updated minor version number to track NPM module version number
   + Updated to opentok-npm 1.0.2
   + Removed TB.min.js to provide the option to choose between Flash & WebRTC versions
