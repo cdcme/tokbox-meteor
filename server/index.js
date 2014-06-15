@@ -2,41 +2,50 @@ OpenTok = Npm.require('opentok');
 var Future = Npm.require('fibers/future');
 
 OpenTokClient = function OpenTokClient(key, secret) {
-  this._client = new OpenTok.OpenTokSDK(key, secret);
+  this._client = new OpenTok(key, secret);
 };
 
-OpenTokClient.roles = OpenTok.RoleConstants;
-
-OpenTokClient.prototype.createSession = function(location, options) {
+OpenTokClient.prototype.createSession = function(options) {
   var self = this;
-  location = location || '127.0.0.1';
   options = options || {};
   var sessionId = sync(function(done) {
-    self._client.createSession(location, options, function(err, result) {
-      done(err, result);
+    self._client.createSession(options, function(err, result) {
+      done(err, result.sessionId);
     });
   });
 
   return sessionId;
 };
 
-OpenTokClient.prototype.generateToken = function(sessionId, role, params) {
-  params = _.clone(params) || {};
-  params.session_id = sessionId;
-  params.role = role;
-
-  return this._client.generateToken(params);
+OpenTokClient.prototype.generateToken = function(sessionId, options) {
+  options = _.clone(options) || {};
+  return this._client.generateToken(sessionId, options);
 };
 
-OpenTokClient.prototype.getArchiveManifest = function(archiveId, token) {
+OpenTokClient.prototype.startArchive = function(sessionId, options) {
   var self = this;
-  var manifest = sync(function(done) {
-    self._client.getArchiveManifest(archiveId, token, function(result) {
+  var archive = sync(function(done) {
+    self._client.startArchive(sessionId, options, function(result) {
       done(null, result);
-    })
+    });
   });
 
-  return manifest;
+  return archive;
+};
+
+OpenTokClient.prototype.stopArchive = function(sessionId) {
+  var self = this;
+  var archive = sync(function(done) {
+    self._client.stopArchive(sessionId, function(result) {
+      done(null, result);
+    });
+  });
+
+  return archive;
+};
+
+OpenTokClient.prototype.getArchive = function(archiveId) {
+  return this._client.getArchive(archiveId);
 };
 
 function sync(asynFunction) {
