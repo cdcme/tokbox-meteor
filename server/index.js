@@ -2,17 +2,15 @@ OpenTok = Npm.require('opentok');
 var Future = Npm.require('fibers/future');
 
 OpenTokClient = function OpenTokClient(key, secret) {
-  this._client = new OpenTok.OpenTokSDK(key, secret);
+  this._client = new OpenTok(key, secret);
 };
-
-OpenTokClient.roles = OpenTok.RoleConstants;
 
 OpenTokClient.prototype.createSession = function(options) {
   var self = this;
   options = options || {};
   var sessionId = sync(function(done) {
     self._client.createSession(options, function(err, result) {
-      done(err, result);
+      done(err, result.sessionId);
     });
   });
 

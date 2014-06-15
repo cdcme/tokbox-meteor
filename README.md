@@ -34,7 +34,7 @@ var session = openTokClient.createSession(options);
 ~~~ js
 var sessionId = 'some-session-id';
 var options = {
-    role: OpenTokClient.roles.PUBLISHER //The role for the token. Each role defines a set of permissions granted to the token
+    role: 'publisher', //The role for the token. Each role defines a set of permissions granted to the token
     data: "userId:42", 
     expireTime: Math.round(new Date().getTime() / 1000) + 86400 // (24 hours) The expiration time for the token, in seconds since the UNIX epoch. The maximum expiration time is 30 days after the creation time. The default expiration time of 24 hours after the token creation time.
 };
