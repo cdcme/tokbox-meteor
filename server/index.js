@@ -20,19 +20,34 @@ OpenTokClient.prototype.createSession = function(options) {
 };
 
 OpenTokClient.prototype.generateToken = function(sessionId, options) {
-  options = _.clone(params) || {};
+  options = _.clone(options) || {};
   return this._client.generateToken(sessionId, options);
 };
 
-OpenTokClient.prototype.getArchiveManifest = function(archiveId, token) {
+OpenTokClient.prototype.startArchive = function(sessionId, options) {
   var self = this;
-  var manifest = sync(function(done) {
-    self._client.getArchiveManifest(archiveId, token, function(result) {
+  var archive = sync(function(done) {
+    self._client.startArchive(sessionId, options, function(result) {
       done(null, result);
-    })
+    });
   });
 
-  return manifest;
+  return archive;
+};
+
+OpenTokClient.prototype.stopArchive = function(sessionId) {
+  var self = this;
+  var archive = sync(function(done) {
+    self._client.stopArchive(sessionId, function(result) {
+      done(null, result);
+    });
+  });
+
+  return archive;
+};
+
+OpenTokClient.prototype.getArchive = function(archiveId) {
+  return this._client.getArchive(archiveId);
 };
 
 function sync(asynFunction) {
