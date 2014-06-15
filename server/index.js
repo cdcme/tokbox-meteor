@@ -7,12 +7,11 @@ OpenTokClient = function OpenTokClient(key, secret) {
 
 OpenTokClient.roles = OpenTok.RoleConstants;
 
-OpenTokClient.prototype.createSession = function(location, options) {
+OpenTokClient.prototype.createSession = function(options) {
   var self = this;
-  location = location || '127.0.0.1';
   options = options || {};
   var sessionId = sync(function(done) {
-    self._client.createSession(location, options, function(err, result) {
+    self._client.createSession(options, function(err, result) {
       done(err, result);
     });
   });
@@ -20,12 +19,9 @@ OpenTokClient.prototype.createSession = function(location, options) {
   return sessionId;
 };
 
-OpenTokClient.prototype.generateToken = function(sessionId, role, params) {
-  params = _.clone(params) || {};
-  params.session_id = sessionId;
-  params.role = role;
-
-  return this._client.generateToken(params);
+OpenTokClient.prototype.generateToken = function(sessionId, options) {
+  options = _.clone(params) || {};
+  return this._client.generateToken(sessionId, options);
 };
 
 OpenTokClient.prototype.getArchiveManifest = function(archiveId, token) {
