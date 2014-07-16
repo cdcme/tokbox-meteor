@@ -9,10 +9,12 @@ Package.describe({
   summary: "Tokbox API for Meteor"
 });
 
-Npm.depends({"opentok" : "2.2.2"});
+Npm.depends({"opentok" : "2.2.3"});
 
 Package.on_use(function(api) {
   api.add_files(['server/index.js'], 'server');
+  api.add_files(['client/opentok.min.js'], 'client');
+  api.add_files(['client/opentok-layout.min.js'], 'client');
   if (typeof api.export !== 'undefined') {
     api.export(['OpenTok', 'OpenTokClient'], 'server');
   }

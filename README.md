@@ -1,17 +1,23 @@
-Tokbox-Meteor
-==============
+Tokbox for Meteor
+=================
 
-Tokbox Smart Package with Native Meteor API
+###Tokbox Smart Package with Meteor _and_ NPM APIs, opentok client-side library, and aullman's opentok-layout-js
 
-### Important Note:
+**opentok-npm v2.2.3** **opentok.min.js v2.2.6** **opentok-layout-js v0.0.12**
+
+##### Important Notes:
 
 If you are updating from a previous version of this SDK, see [Important changes in v2.2](https://github.com/opentok/opentok-node#important-changes-in-v22).
 
 Archiving, createSession, and generateToken functions have changed.
 
-### Native API
+##Server-side usage
+
+### Meteor API
 
 #### Create Tokbox Server Client
+
+To use the Meteor API, use the `OpenTokClient` namespace.
 
 ~~~ js
 var openTokClient = new OpenTokClient('key', 'secret');
@@ -35,7 +41,7 @@ var session = openTokClient.createSession(options);
 var sessionId = 'some-session-id';
 var options = {
     role: 'publisher', //The role for the token. Each role defines a set of permissions granted to the token
-    data: "userId:42", 
+    data: "userId:42",
     expireTime: Math.round(new Date().getTime() / 1000) + 86400 // (24 hours) The expiration time for the token, in seconds since the UNIX epoch. The maximum expiration time is 30 days after the creation time. The default expiration time of 24 hours after the token creation time.
 };
 
@@ -64,27 +70,29 @@ var sessionId = 'some-session-id';
 var archive = openTokClient.stopArchive(sessionId);
 ~~~
 
-### Low Level NPM API
+### Low-level NPM API
 
-If you need access to the low level [NPM module API](https://github.com/opentok/opentok-node), use `OpenTok` namespace.
+If you need access to the low level [NPM module API](https://github.com/opentok/opentok-node), use the `OpenTok` namespace.
 See [further documentation on the node client here](http://tokbox.com/opentok/libraries/server/node/reference/OpenTok.html).
 
-### Client-side usage
+##Client-side usage
 
-In the `<head>` section of your app:
+Use of the Flash version (v1.x) of Opentok is no longer supported. The 2.2.x version of the client-side library is now bundled in this package.
 
-~~~ html
-<script src="http://static.opentok.com/webrtc/v2.2/js/TB.min.js" ></script>
-~~~
+The `2.2.4` release of this package includes [aullman's](https://github.com/aullman) [opentok-layout-js](https://github.com/aullman/opentok-layout-js). For more information on how to use it to lay out
+your streams, [see that project's README](https://github.com/aullman/opentok-layout-js/blob/master/README.md).
 
-for the WebRTC version. The WebRTC version is recommended since Tokbox is deprecating the Flash version. However, if you still want to use the Flash version, you can do this in the `<head>` of your app:
+If you use the browser-policy package, be sure to include a server-side rule to allow all from opentok:
 
-~~~ html
-<script src="http://static.opentok.com/v1.1/js/TB.min.js" ></script>
-~~~
+```javascript
+BrowserPolicy.content.allowOriginForAll("http://*.opentok.com:*");
+```
 
 ### Changelog
 
+  + Bundle opentok.min.js v2.2.6
+  + Added [aullman's](https://github.com/aullman) [opentok-layout-js](https://github.com/aullman/opentok-layout-js)
+  + Updated to opentok-npm 2.2.3
   + Updated to opentok-npm 2.2.2
   + Updated minor version number to track NPM module version number
   + Updated to opentok-npm 1.0.2
