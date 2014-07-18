@@ -3,7 +3,7 @@ Tokbox for Meteor
 
 ###Tokbox Smart Package with Meteor _and_ NPM APIs, opentok client-side library, and aullman's opentok-layout-js
 
-**opentok-npm v2.2.3** **opentok.min.js v2.2.6** **opentok-layout-js v0.0.12**
+**opentok-npm v2.2.3** **opentok.min.js v2.2.7** **opentok-layout-js v0.0.12**
 
 ##### Important Notes:
 
@@ -90,6 +90,7 @@ BrowserPolicy.content.allowOriginForAll("http://*.opentok.com:*");
 
 ### Changelog
 
+  + Update opentok.min.js to v2.2.7
   + Bundle opentok.min.js v2.2.6
   + Added [aullman's](https://github.com/aullman) [opentok-layout-js](https://github.com/aullman/opentok-layout-js)
   + Updated to opentok-npm 2.2.3
