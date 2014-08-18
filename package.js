@@ -9,7 +9,7 @@ Package.describe({
   summary: "Tokbox API for Meteor"
 });
 
-Npm.depends({"opentok" : "2.2.3"});
+Npm.depends({"opentok" : "2.2.4"});
 
 Package.on_use(function(api) {
   api.add_files(['server/index.js'], 'server');
