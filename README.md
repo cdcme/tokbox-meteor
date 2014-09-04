@@ -1,15 +1,23 @@
 Tokbox for Meteor
 =================
 
-###Tokbox Smart Package with Meteor _and_ NPM APIs, opentok client-side library, and aullman's opentok-layout-js
+#Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API
 
-**opentok-npm v2.2.4** **opentok.min.js v2.2.8** **opentok-layout-js v0.0.12**
+**opentok-npm v2.2.4** **opentok.min.js v2.2.9** **opentok-layout-js v0.0.12**
 
 ##### Important Notes:
+
+Starting with version 2.2.8, this package is now fully compatible with the new Meteor 0.9.x package system.
 
 If you are updating from a previous version of this SDK, see [Important changes in v2.2](https://github.com/opentok/opentok-node#important-changes-in-v22).
 
 Archiving, createSession, and generateToken functions have changed.
+
+##Installation
+
+~~~shell
+meteor add carlodicelico:tokbox
+~~~
 
 ##Server-side usage
 
@@ -90,6 +98,8 @@ BrowserPolicy.content.allowOriginForAll("http://*.opentok.com:*");
 
 ### Changelog
 
+  + Update package to be 0.9.x compatible
+  + Update opentok.min.js to v2.2.9
   + Update opentok.min.js to v2.2.8
   + Update to opentok-npm 2.2.4
   + Update opentok.min.js to v2.2.7.1
