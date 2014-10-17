@@ -25,8 +25,8 @@ OpenTokClient.prototype.generateToken = function(sessionId, options) {
 OpenTokClient.prototype.startArchive = function(sessionId, options) {
   var self = this;
   var archive = sync(function(done) {
-    self._client.startArchive(sessionId, options, function(result) {
-      done(null, result);
+    self._client.startArchive(sessionId, options, function(err, result) {
+      done(err, result);
     });
   });
 
@@ -36,8 +36,8 @@ OpenTokClient.prototype.startArchive = function(sessionId, options) {
 OpenTokClient.prototype.stopArchive = function(sessionId) {
   var self = this;
   var archive = sync(function(done) {
-    self._client.stopArchive(sessionId, function(result) {
-      done(null, result);
+    self._client.stopArchive(sessionId, function(err, result) {
+      done(err, result);
     });
   });
 
