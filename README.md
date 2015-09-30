@@ -11,17 +11,17 @@ Tokbox for Meteor
 
 Starting with version 2.2.8, this package is now fully compatible with the new Meteor 0.9.x package system.
 
-If you are updating from a previous version of this SDK, see [Important changes in v2.2](https://github.com/opentok/opentok-node#important-changes-in-v22).
+If you are updating from a previous version of this SDK, see [Important changes in v2.2](https://github.com/opentok/opentok-node# important-changes-in-v22).
 
 Archiving, createSession, and generateToken functions have changed.
 
-##Installation
+## Installation
 
 ~~~shell
 meteor add carlodicelico:tokbox
 ~~~
 
-##Server-side usage
+## Server-side usage
 
 ### Meteor API
 
@@ -85,7 +85,7 @@ var archive = openTokClient.stopArchive(sessionId);
 If you need access to the low level [NPM module API](https://github.com/opentok/opentok-node), use the `OpenTok` namespace.
 See [further documentation on the node client here](http://tokbox.com/opentok/libraries/server/node/reference/OpenTok.html).
 
-##Client-side usage
+## Client-side usage
 
 Use of the Flash version (v1.x) of Opentok is no longer supported. The 2.2.x version of the client-side library is now bundled in this package.
 

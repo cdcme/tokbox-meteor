@@ -1,6 +1,6 @@
 Package.describe({
-  summary: "Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API",
-  version: "2.2.9",
+  summary: "Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API. Forks carlodicelico/tokbox-meteor",
+  version: "2.3.0",
   name: "aspin:tokbox",
   git: "https://github.com/aspin/tokbox-meteor"
 });
