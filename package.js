@@ -5,7 +5,7 @@ Package.describe({
   git: "https://github.com/carlodicelico/tokbox-meteor.git"
 });
 
-Npm.depends({"opentok" : "2.2.4"});
+Npm.depends({"opentok" : "2.3.0"});
 
 Package.onUse(function(api) {
   api.versionsFrom('0.9.0');
