@@ -1,7 +1,7 @@
 Tokbox for Meteor
 =================
 
-#Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API
+# Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API
 
 **opentok-npm v2.3.0* **opentok.min.js v2.6.6** **opentok-layout-js v0.0.12**
 
