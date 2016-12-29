@@ -1,11 +1,11 @@
 Package.describe({
   summary: "Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API",
-  version: "2.2.8",
+  version: "2.10.0",
   name: "carlodicelico:tokbox",
   git: "https://github.com/carlodicelico/tokbox-meteor.git"
 });
 
-Npm.depends({"opentok" : "2.2.4"});
+Npm.depends({"opentok" : "2.5.0"});
 
 Package.onUse(function(api) {
   api.versionsFrom('0.9.0');

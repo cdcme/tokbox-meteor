@@ -1,13 +1,14 @@
 Tokbox for Meteor
 =================
 
-#DEPRECATION NOTICE: This package is no longer necessary. [Use the npm package directly, instead](https://guide.meteor.com/using-npm-packages.html).
-
 #Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API
 
-**opentok-npm v2.2.4** **opentok.min.js v2.2.9** **opentok-layout-js v0.0.12**
+**opentok-npm v2.5.0** **opentok.min.js v2.10.0** **opentok-layout-js v0.1.0**
 
 ##### Important Notes:
+
+**DEPRECATION NOTICE:**
+It is no longer necessary to use this package in your Meteor apps! This package simply wraps the NPM package, which [Meteor supports directly as of 1.3](https://guide.meteor.com/atmosphere-vs-npm.html). This package is up-to-date as of December 29th, 2016, but will no longer be maintained!
 
 Starting with version 2.2.8, this package is now fully compatible with the new Meteor 0.9.x package system.
 
@@ -100,6 +101,9 @@ BrowserPolicy.content.allowOriginForAll("http://*.opentok.com:*");
 
 ### Changelog
 
+  + Update opentok.min.js to 2.10.0
+  + Update opentok-npm to 2.5.0
+  + Update opentok-layout-js to 0.1.0
   + Update package to be 0.9.x compatible
   + Update opentok.min.js to v2.2.9
   + Update opentok.min.js to v2.2.8
@@ -115,3 +119,4 @@ BrowserPolicy.content.allowOriginForAll("http://*.opentok.com:*");
   + Removed TB.min.js to provide the option to choose between Flash & WebRTC versions
   + Added native Meteor API
   + Updated to opentok-npm 0.3.4
+
