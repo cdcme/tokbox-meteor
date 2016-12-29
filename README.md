@@ -1,6 +1,8 @@
 Tokbox for Meteor
 =================
 
+#DEPRECATION NOTICE: This package is no longer necessary. [Use the npm package directly, instead](https://guide.meteor.com/using-npm-packages.html).
+
 #Integrate real-time communications into your website and mobile apps using the OpenTok WebRTC API
 
 **opentok-npm v2.2.4** **opentok.min.js v2.2.9** **opentok-layout-js v0.0.12**
